@@ -13,7 +13,7 @@ def reduce (array, starting_value = 0)
   i = 0
   total = starting_value
   while i < array.length do
-    total = yield(array[i], total)
+    total = yield(total, array[i])
     p total
     i += 1
   end
