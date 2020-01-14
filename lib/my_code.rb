@@ -9,12 +9,16 @@ def map (array)
   new
 end
 
-def reduce (array, starting_value = array[0])
-  i = 0
-  total = starting_value
+def reduce (array, starting_value = nil)
+  if starting_value
+    i = 0
+    total = starting_value
+  else
+    i = 1
+    total = array[0]
+  end
   while i < array.length do
     total = yield(total, array[i])
-    p total
     i += 1
   end
   total
