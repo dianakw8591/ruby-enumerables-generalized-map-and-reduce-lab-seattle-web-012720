@@ -9,7 +9,7 @@ def map (array)
   new
 end
 
-def reduce (array, starting_value = 0)
+def reduce (array, starting_value = nil)
   i = 0
   total = starting_value
   while i < array.length do
