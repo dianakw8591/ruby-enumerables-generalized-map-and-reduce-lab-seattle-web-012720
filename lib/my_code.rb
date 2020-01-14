@@ -12,4 +12,4 @@ end
 def reduce (array, starting_value = 0)
   i = 0
   while i < array.length do
-    total += yield(array[i])
+    total = yield(array[i], total)
